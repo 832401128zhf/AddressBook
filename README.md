@@ -59,3 +59,14 @@ AddressBook/
 5. 首次运行自动创建 SQLite 数据库 `addressbook.db` 并写入 3 条示例数据。
 
 > 详细的“一步一步”操作请见 [`操作说明.md`](./操作说明.md)。
+
+## 在线访问（腾讯云部署）
+
+- 访问地址：http://111.230.148.219:5000
+- 部署环境：腾讯云轻量应用服务器（Ubuntu 22.04）
+- 部署方式：.NET 8 自包含发布 + systemd 常驻服务
+
+## 相关链接
+
+- 代码规范：[CODING_STANDARDS.md](./CODING_STANDARDS.md)
+- 操作指南：[操作说明.md](./操作说明.md)
