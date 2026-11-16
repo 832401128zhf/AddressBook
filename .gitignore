@@ -1,0 +1,22 @@
+## 忽略构建产物
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+.vs/
+
+## 忽略本地数据库文件（运行时自动生成）
+*.db
+*.db-shm
+*.db-wal
+
+## 忽略本地发布产物 / 部署压缩包
+publish-linux/
+publish-win/
+*.zip
+
+## 其他
+*.log
+*.tmp
