@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "导入 Excel";
+}
+
+<h2>📥 导入 Excel 通讯录</h2>
+<hr />
+
+<form asp-action="Import" method="post" enctype="multipart/form-data" style="max-width:640px">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+    <div class="mb-3">
+        <label class="form-label">选择 .xlsx 文件</label>
+        <input type="file" name="file" class="form-control" accept=".xlsx" required />
+    </div>
+    <button type="submit" class="btn btn-primary">开始导入</button>
+    <a asp-action="Template" class="btn btn-outline-secondary">下载导入模板</a>
+    <a asp-action="Index" class="btn btn-outline-secondary">返回列表</a>
+</form>
+
+<div class="alert alert-info mt-4" style="max-width:760px">
+    <strong>格式说明：</strong>
+    <ul class="mb-0">
+        <li>第一行为表头，固定列：<code>姓名、公司、电话、邮箱、社交账号、地址、备注、收藏</code>。</li>
+        <li><code>姓名</code> 为必填列，其余列可留空。</li>
+        <li>同一联系人有多个同类型联系方式时，用中文分号 <code>；</code> 分隔（例如 <code>13800000001；0591-88888888</code>）。</li>
+        <li><code>收藏</code> 列填 <code>是</code> 表示收藏，填 <code>否</code> 或留空表示不收藏。</li>
+        <li>建议把“电话”列设为“文本”格式，避免长数字被 Excel 变成科学计数法。</li>
+        <li>建议先点击“下载导入模板”，按模板填写后上传。</li>
+    </ul>
+</div>

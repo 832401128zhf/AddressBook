@@ -1,0 +1,19 @@
+body {
+    background-color: #f5f6f8;
+}
+
+.method-row {
+    background: #fff;
+    padding: 0.6rem;
+    border: 1px solid #e9ecef;
+    border-radius: 0.4rem;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+footer {
+    background-color: #fff;
+}
